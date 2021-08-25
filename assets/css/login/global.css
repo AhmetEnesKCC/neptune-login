@@ -1,0 +1,56 @@
+:root {
+  --main-green: #00ba94;
+  --black: #212121;
+  --white: #fafafa;
+  --main-orange: #fe4807;
+  --faded-orange: #ff9d7b;
+  --gradient-inner: var(--main-green);
+  --gradient-outer: #005d4a;
+  --gradient-right: radial-gradient(
+    circle at center,
+    var(--gradient-inner) 0,
+    var(--gradient-outer) 100%
+  );
+  --ff: Poppins;
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-regular: 400;
+  --fw-light: 300;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* Hide default ey icon for input type password */
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none;
+}
+
+/* Prevent user selection */
+
+.user-select-none {
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: Poppins;
+  src: url(/assets/fonts/Poppins-Regular.ttf) format(truetype) font-weight-400,
+    url(/assets/fonts/Poppins-Bold.ttf) format(truetype) font-weight-700,
+    url(/assets/fonts/Poppins-Light.ttf) format(truetype) font-weight-300,
+    url(/assets/fonts/Poppins-SemiBold.ttf) format(truetype) font-weight-600;
+}

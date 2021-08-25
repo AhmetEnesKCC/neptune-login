@@ -1,0 +1,155 @@
+main {
+  display: flex;
+}
+
+main .login-side--left {
+  width: 500px;
+  padding: 5vh 80px;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+main .login-side--right {
+  background: var(--gradient-right);
+  background-color: var(--main-green);
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-family: var(--ff);
+  color: var(--white);
+  font-weight: var(--fw-semibold);
+}
+
+main .login-side--left form {
+  margin-top: 60px;
+}
+
+main .login-side--left form .title {
+  font-family: var(--ff);
+  font-weight: var(--fw-bold);
+  font-size: 25px;
+  margin-bottom: 60px;
+}
+
+main .login-side--left form label:not(.radio) {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff);
+  font-weight: var(--fw-semibold);
+  margin-top: 50px;
+  /* Gap is a new feature so used an alternative for older browsers */
+  /* gap: 10px; */
+}
+
+main .login-side--left form label:not(.radio):focus-within input {
+  border-color: var(--faded-orange);
+}
+
+main .login-side--left form label .password-input--container {
+  position: relative;
+  margin-top: 5px;
+}
+
+main .login-side--left form label input[type="email"],
+main .login-side--left form label input[type="password"] {
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: var(--black) 3px solid;
+  outline: none;
+  font-size: 20px;
+  font-family: var(--ff);
+  font-weight: var(-fw-semibold);
+  width: 100%;
+}
+
+main .login-side--left form label .password-input--container span {
+  position: absolute;
+  top: 50%;
+  padding: 5px;
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  transform: translateY(-50%);
+  right: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+main .login-side--left form label input[type="password"] {
+  padding-right: 60px;
+}
+
+main .login-side--left form label input[type="email"] {
+  margin-top: 5px;
+}
+
+.radio {
+  font-size: 18px;
+  font-family: var(--ff);
+  font-weight: var(--fw-regular);
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-gap: 0.5rem;
+  color: var(--black);
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.radio-input {
+  display: flex;
+}
+
+.radio-input input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-input input:checked + .radio-control {
+  background: radial-gradient(
+    circle at center,
+    var(--main-green) 50%,
+    rgba(255, 0, 0, 0) 51%
+  );
+}
+
+.radio-control {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 0.1em solid var(--main-green);
+  transform: translateY(-0.05em);
+}
+
+.radio-label {
+  line-height: 1;
+}
+
+main .login-side--left form button {
+  padding: 4px 20px;
+  font-size: 20px;
+  font-family: var(--ff);
+  font-weight: var(--fw-semibold);
+  outline: none;
+  display: block;
+  margin: 0px auto;
+  margin-top: 30px;
+  border: none;
+  background-color: var(--main-green);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+main .login-side--left form button:hover {
+  opacity: 0.7;
+}

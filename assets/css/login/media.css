@@ -1,0 +1,17 @@
+/* Tablet */
+@media screen and (max-width: 900px) {
+  main .login-side--right {
+    display: none;
+  }
+  main .login-side--left {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+
+@media screen and (max-width: 756px) {
+  main .login-side--left {
+    padding: 20px 30px;
+  }
+}
